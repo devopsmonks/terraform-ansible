@@ -9,7 +9,9 @@ variable "amis" {
   type = "map"
   default = {
     eu-west-1 = "ami-0ddf403ca855dacf5" # EU Ireland
-    eu-west-2 = "ami-046dc2dacfa0ae854" # EU London
+    # eu-west-2 = "ami-046dc2dacfa0ae854" # EU London
+    # eu-west-2 = "ami-0d6ebdfc4096e7a6a" # EU London private image
+    eu-west-2 = "ami-0521c4dc863d418da" # EU London
     us-east-1 = "mi-00d4e9ff62bc40e03" # US N.virginia
   }
 }
@@ -17,6 +19,8 @@ variable "amis" {
 variable "ami" {
   default = "ami-046dc2dacfa0ae854"
 }
+
+
 variable "instance" {
   default = "t2.large"
 }

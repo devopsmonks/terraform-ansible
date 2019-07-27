@@ -7,10 +7,9 @@
 
 # .tfvars files
 *.tfvars
-
-*/terraform.tfvars
-*/terraform.tfstate
-*/terraform.tfstate.backup
 */mykey*
 */.pem*
 */.ssh*p
+*.ini
+*.tfstate
+*.tfstate.backup

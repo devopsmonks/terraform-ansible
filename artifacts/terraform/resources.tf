@@ -76,7 +76,7 @@ resource "aws_instance" "jenkins-ci" {
 	  echo "[jenkins-ci]" | tee -a jenkins-ci.ini;
 	  echo "${aws_instance.jenkins-ci[count.index].public_ip} ansible_user=${var.ansible_user} ansible_ssh_private_key_file=${var.private_key}" | tee -a jenkins-ci.ini;
       export ANSIBLE_HOST_KEY_CHECKING=False;
-	  ansible-playbook -u ${var.ansible_user} --private-key ${var.private_key} -i jenkins-ci.ini ../playbooks/jenkins.yaml
+	  ansible-playbook -u ${var.ansible_user} --private-key ${var.private_key} -i jenkins-ci.ini ../playbooks/install_jenkins.yaml
     EOT
   }
 
